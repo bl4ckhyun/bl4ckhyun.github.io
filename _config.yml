@@ -29,7 +29,7 @@ github:
   username: bl4ckhyun # change to your GitHub username
 
 twitter:
-  username: bl4ckhyun # change to your Twitter username
+  username: none # change to your Twitter username
 
 social:
   # Change to your full name.
@@ -38,11 +38,11 @@ social:
   email: wonju345@naver.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
+    #- https://twitter.com/username # change to your Twitter homepage
     - https://github.com/bl4ckhyun # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/hyeontae-lee-802ab031b
+    #- https://www.linkedin.com/in/hyeontae-lee-802ab031b
 
 # Site Verification Settings
 webmaster_verifications:
