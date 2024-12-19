@@ -33,7 +33,7 @@ Bluetooth는 크게 **블루투스 클래식(Bluetooth Classic)**과 **블루투
 
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/fbe3017b-48ef-446f-85c3-99790b51fdc3" width = 500>
+<img src="https://github.com/user-attachments/assets/fbe3017b-48ef-446f-85c3-99790b51fdc3" alt="image" width = 500>
 </p>
 해당 이미지는 리눅스 시스템 내에서 구현된 Bluetooth LE의 아키텍처를 보여준다.
 
@@ -62,7 +62,7 @@ Bluetooth는 크게 **블루투스 클래식(Bluetooth Classic)**과 **블루투
 ## architecture of Bluetooth on Linux when using BlueZ
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/c47cea57-5a34-48ac-90c5-8be1260bc626" width = 700>
+<img src="https://github.com/user-attachments/assets/c47cea57-5a34-48ac-90c5-8be1260bc626" alt="image" width = 700>
 </p>
 이 그림에서 볼 수 있듯이, BlueZ는 Bluetooth LE 스택의 **Host** 레이어를 구현하며, **Controller는** 일반적으로 컴퓨터의 일부로 통합되어 있거나 USB 블루투스 동글과 같은 주변장치 내에 구현된다. 
 

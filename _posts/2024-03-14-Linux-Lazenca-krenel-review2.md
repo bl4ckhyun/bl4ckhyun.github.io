@@ -16,7 +16,7 @@ Device란 컴퓨터에 물려있는 여러 주변장치를 뜻한다.
 `/dev/`아래에 들어있는 파일들은 Device Driver와 연결된 interface 역할을 하며(Device Driver interface), 이를 통해 응용 프로그램이 하드웨어오 독립적으로 디바이스에 접근할 수 있다.
 
 <p align="center">
-<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/b19d21d1-e4f5-42c9-9e79-dc384656d6c9" width = 500>
+<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/b19d21d1-e4f5-42c9-9e79-dc384656d6c9"  alt="image" width = 500>
 </p>
 
 1. **실제 물리적 하드웨어(Real Device)**
@@ -42,7 +42,7 @@ Device란 컴퓨터에 물려있는 여러 주변장치를 뜻한다.
 Linux는 Device Driver와 VFS 계층을 통해 물리적 하드웨어와 응용 프로그램 사이의 추상화 계층을 제공합니다. 이를 통해 개발자는 효율적으로 다양한 하드웨어를 지원할 수 있다.
 
 <p align="center">
-<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/b4939a43-752e-4ea1-bf91-31db7fcc0688" width = 500>
+<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/b4939a43-752e-4ea1-bf91-31db7fcc0688" alt="image" width = 500>
 </p>
 
 사진으로 통해, 한눈에 Device Driver의 종류를 확인할수 있으며, 해당 Device Driver가 어떠한 Device를 위해 존재하는지 알수 있다.
@@ -50,7 +50,7 @@ Linux는 Device Driver와 VFS 계층을 통해 물리적 하드웨어와 응용 
 # Character Device Drivers
 
 <p align="center">
-<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/ee7564af-c758-40bf-bdba-c9e54159d9cc" width = 500>
+<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/ee7564af-c758-40bf-bdba-c9e54159d9cc" alt="image" width = 500>
 </p>
 
 * **Character Device Drivers**는 유저 프로세스로부터 직접(**buffer cache**등을 사용하지 않고) 데이터를 읽고 쓰는 디바이스 드라이버이다.
@@ -136,7 +136,7 @@ struct file_operations chardev_fops = {
 ## Simple Char Device Driver 
 
 <p align="center">
-<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/0f1059ed-ea6c-49c5-8f2b-900f1aaf8f47" width = 500>
+<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/0f1059ed-ea6c-49c5-8f2b-900f1aaf8f47" alt="image" width = 500>
 </p>
 
 해당 사진에 있는 과정에서 mknod 명령어를 통해 디바이스 파일을 만든다. 해당 명령어로 디바이스 파일을 만들었으면, 이제 응용프로그램에서 open(), read()등을 이용해서 디바이스 파일에 접근한다.  
@@ -161,7 +161,7 @@ int register_chrdev(unsigned int major, const char *name, const struct file_oper
 이제 응용프로그램에서 해당 Device를 open하면, my_open함수가 호출된다.
 
 <p align="center">
-<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/dc0abf0e-47e0-4958-9151-79e5233b6670" width = 550>
+<img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/dc0abf0e-47e0-4958-9151-79e5233b6670" alt="image" width = 550>
 </p>
 
 리눅스에서 디바이스 드라이버 개발에 필수적인 개념 중 하나는 `시스템 호출`과 `파일 연산`의 연동이다. 사용자 공간에서 파일을 열기, 읽기, 쓰기 또는 닫기 등의 시스템 호출을 할 때, 커널은 이러한 요청을 처리하기 위해 등록된 디바이스 드라이버의 함수를 호출한다. 이 과정은 `트랩`을 통해 이루어진다.

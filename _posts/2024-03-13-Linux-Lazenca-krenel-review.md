@@ -70,7 +70,7 @@ $ dmesg | tail -1
 
 # User Space VS Kernel Space
 <p align="center">
-<img src ="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/4bbb95fe-dab9-47ec-ae3d-a68b3a29d588" width = 500>
+<img src ="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/4bbb95fe-dab9-47ec-ae3d-a68b3a29d588" alt="image" width = 500>
 </p>
 
 * `Kernel`: 운영 체제의 핵심 부분으로, 시스템 자원 관리, 프로세스 관리, 메모리 관리 등의 기능을 수행한다.
