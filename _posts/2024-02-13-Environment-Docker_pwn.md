@@ -24,7 +24,7 @@ CTF에 나갈때 Pwnable 문제를 풀때면 불편한게 있었다.
 **Visual Code** 를 설치하고 아래와 같이 확장 프로그램을 설치해주시면 됩니다.
 
 <p align="center">
-<img src ="https://user-images.githubusercontent.com/78135526/205292743-1c0bf652-4583-4c4f-90b2-27f033960618.png" width = 400>
+<img src ="https://user-images.githubusercontent.com/78135526/205292743-1c0bf652-4583-4c4f-90b2-27f033960618.png"  alt="img" width = 400>
 </p>
 
 이후 현재 디렉토리에 Dockerfile을 생성하고 사용할 버전을 맞춰 만들면 됩니다.
@@ -52,7 +52,7 @@ docker run -it --rm --cap-add SYS_PTRACE --security-opt seccomp:unconfined --nam
   * 공유폴더를 만드는 이유는 다운받은 문제를 편하게 갖고오기 위해서 이다.
 
 <p align="left">
-<img src ="/assets/images/data/set.png" width = 700>
+<img src ="/assets/images/data/set.png" alt="img" width = 700>
 </p>
 
 그럼 이제 사진과 같이 VScode를 키고 터미널에 위에 명령어를 적으면 위에서 빌드한 이미지가 실행된다.
