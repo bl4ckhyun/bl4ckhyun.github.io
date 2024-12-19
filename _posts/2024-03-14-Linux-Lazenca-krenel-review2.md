@@ -4,7 +4,8 @@ title: "Lazenca : Character Device Drivers"
 date: '2024-3-14 11:11:11 +0900'
 description: 'Review about Kernel of Lazenca'
 categories: [Dev&Backorund, Linux]
-img: https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/10f87e65-fde3-4a2d-9af9-7d7b442f3ad7
+banner:
+    image: https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/10f87e65-fde3-4a2d-9af9-7d7b442f3ad7
 tags: [linux, kernel, Review]
 ---
 
@@ -433,7 +434,7 @@ Writing message to the device [hello my name is NAME].
 Killed
 ```
 
-## reference
+### reference
 * [https://jeongzero.oopy.io/c5c9c223-d17f-4bbc-b054-4d9fa1faffd1](https://jeongzero.oopy.io/c5c9c223-d17f-4bbc-b054-4d9fa1faffd1)
 * [https://pr0gr4m.tistory.com/entry/Linux-Kernel-5-Character-Device-Driver](https://pr0gr4m.tistory.com/entry/Linux-Kernel-5-Character-Device-Driver)
 * [https://www.lazenca.net/display/TEC/02.Character+Device+Drivers](https://www.lazenca.net/display/TEC/02.Character+Device+Drivers)

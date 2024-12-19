@@ -4,13 +4,14 @@ title: "Linux : Bluetooth Background"
 date: '2024-6-1 11:11:11 +0900'
 description: 'Basic info about Bluetooth'
 categories: [Dev&Backorund, Linux]
-img: https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/10f87e65-fde3-4a2d-9af9-7d7b442f3ad7
+banner:
+    image: https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/10f87e65-fde3-4a2d-9af9-7d7b442f3ad7
 tags: [linux, kernel, Review, Bluetooth]
 ---
 
-## Bluetooth
+# Bluetooth
 
-### Whats bluetooth?
+## Whats bluetooth?
 
 블루투스(Bluetooth)는 근거리 무선 통신 기술의 하나로, 두 기기들 간에 중간 네트워킹 장비 없이 데이터를 주고받을 수 있게 해줍니다
 
@@ -19,7 +20,7 @@ Bluetooth는 크게 **블루투스 클래식(Bluetooth Classic)**과 **블루투
 > 간단하게 Bluetooth 3.0까지는 블루투스 클래식, 블루투스 4.0부터는 BLE이라고 부른다.
 > 
 
-### So, Whats the **Bluetooth Low Energy?**
+## So, Whats the **Bluetooth Low Energy?**
 
 **Bluetooth Low Energy**는 영어 그대로 저전력 블루투스이다. 
 
@@ -30,7 +31,7 @@ Bluetooth는 크게 **블루투스 클래식(Bluetooth Classic)**과 **블루투
 - 하지만 단방향 통신도 가능하게 되었다는게 4.0의 특징이다.
     - 이러한 단방향 통신은 블루투스 기기가 정보를 송신할수 있으면서도 수신하기 위해 대기할 필요가 없다는 뜻이다.
 
-### then, Linux and Bluetooth Architecture
+## then, Linux and Bluetooth Architecture
 
 
 <p align="center">
@@ -60,7 +61,7 @@ Bluetooth는 크게 **블루투스 클래식(Bluetooth Classic)**과 **블루투
 > 호스트와 컨트롤러는 **호스트 컨트롤러 인터페이스(HCI, Host Controller Interface)**를 통해 통신하며, 이는 호스트가 컨트롤러에 접근할 수 있도록 표준화된 통신 다리를 제공한다.
 > 
 
-### architecture of Bluetooth on Linux when using BlueZ
+## architecture of Bluetooth on Linux when using BlueZ
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/c47cea57-5a34-48ac-90c5-8be1260bc626" width = 700>
@@ -82,7 +83,7 @@ Bluetooth는 크게 **블루투스 클래식(Bluetooth Classic)**과 **블루투
 
  그리고, 사진에 dbus-daemon이 있는데 이는 리눅스에서 **D-Bus**라고 하는 인터프로세스 통신(IPC) 시스템의 핵심 부분이다.
 
-## D-Bus
+# D-Bus
 
 D-Bus는 동일한 시스템에서 실행 중인 여러 프로세스 간의 통신을 가능하게 한다. BlueZ의 경우 바로 위에 있는 [사진](https://www.notion.so/background-e97298a1f4f045e29e9dc0ad8b5cad97?pvs=21)을 보다시피, Bluetooth 데몬(bluetoothd)과 작성한 애플리케이션 간의 통신에 사용된다.
 
@@ -104,7 +105,7 @@ System Bus -> Bus Name -> Object Path -> Interface -> Method
 > BlueZ API에 접근하려면 이 계층 구조를 따라 버스, 버스 이름, 객체 경로, 인터페이스, 메소드를 차례로 지정해야 한다. 이 정보들을 정확히 알고 있어야 D-Bus 바인딩을 통해 BlueZ API를 호출할 수 있다.
 > 
 
-### Buses
+## Buses
 
 두 종류의 버스들이 존재한다.
 
@@ -113,7 +114,7 @@ System Bus -> Bus Name -> Object Path -> Interface -> Method
     1. 시스템 서비스와 사용자 애플리케이션 간의 통신을 가능하게 한다.
     2. **BlueZ 및 bluetoothd 접속을 위해 우리는 항상 시스템 버스를 사용한다.**
 
-### Bus Name
+## Bus Name
 
 나의 컴퓨터에서 사용 가능한 모든 시스템 D-Bus 이름을 보기 위해 아래 명령어를 실행해본다.
 
@@ -123,7 +124,7 @@ $ busctl list
 
 확인해 보면, 아래에 org.bluez가 있다. 이것은 BlueZ bluetoothd 정보에 사용됩니다.
 
-### Object Path
+## Object Path
 
 `Object Path`는 파일 시스템 경로처럼 보이지만, 실제로는 D-Bus 상의 고유 객체들을 식별하는 식별자입니다. 예를 들어, 리눅스 시스템에서 기본 블루투스 어댑터의 경로는 일반적으로 `/org/bluez/hci0` 이다.
 
@@ -134,7 +135,7 @@ l@ubuntu:~/Desktop$ busctl tree org.bluez
     └─/org/bluez/hci0
 ```
 
-### Interface
+## Interface
 
 인터페이스를 메소드와 신호의 명명된 그룹으로 생각해라. D-Bus는 간단한 네임스페이스 문자열로 인터페이스를 식별한다다. 
 
