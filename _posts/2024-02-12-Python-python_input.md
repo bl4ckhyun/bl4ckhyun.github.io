@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python :  Python Input"
-date: '2024-2-11 11:11:11 +0900'
+date: '2024-2-12 11:11:11 +0900'
 description: "sys.readline"
 categories: [Dev&Backorund, Python]
 tags: [Python, study]

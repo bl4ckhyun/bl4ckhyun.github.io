@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python : Python Study"
-date: '2024-2-11 11:11:11 +0900'
+date: '2024-2-13 11:11:11 +0900'
 description: "python study with book"
 categories: [Dev&Backorund, Python]
 tags: [Python, study]

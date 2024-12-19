@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Python :  Python lambda & lamda's use"
-date: '2024-2-11 11:11:11 +0900'
+date: '2024-2-14 11:11:11 +0900'
 description: "python study"
 categories: [Dev&Backorund, Python]
 tags: [Python, study]
