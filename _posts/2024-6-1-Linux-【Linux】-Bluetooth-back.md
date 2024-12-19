@@ -4,9 +4,6 @@ title: "Linux : Bluetooth Background"
 date: '2024-6-1 11:11:11 +0900'
 description: 'Basic info about Bluetooth'
 categories: [Dev&Backorund, Linux]
-banner:
-    image: https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/10f87e65-fde3-4a2d-9af9-7d7b442f3ad7
-    alt: "Banner"
 tags: [linux, kernel, Review, Bluetooth]
 ---
 
