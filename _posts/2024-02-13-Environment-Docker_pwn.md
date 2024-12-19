@@ -23,7 +23,7 @@ CTF에 나갈때 Pwnable 문제를 풀때면 불편한게 있었다.
 
 **Visual Code** 를 설치하고 아래와 같이 확장 프로그램을 설치해주시면 됩니다.
 
-<p align="center">
+<p align="left">
 <img src ="https://user-images.githubusercontent.com/78135526/205292743-1c0bf652-4583-4c4f-90b2-27f033960618.png"  alt="img" width = 400>
 </p>
 
