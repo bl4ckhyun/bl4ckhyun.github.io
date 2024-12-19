@@ -15,7 +15,7 @@ Device란 컴퓨터에 물려있는 여러 주변장치를 뜻한다.
 
 `/dev/`아래에 들어있는 파일들은 Device Driver와 연결된 interface 역할을 하며(Device Driver interface), 이를 통해 응용 프로그램이 하드웨어오 독립적으로 디바이스에 접근할 수 있다.
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/b19d21d1-e4f5-42c9-9e79-dc384656d6c9"  alt="image" width = 500>
 </p>
 
@@ -41,7 +41,7 @@ Device란 컴퓨터에 물려있는 여러 주변장치를 뜻한다.
 
 Linux는 Device Driver와 VFS 계층을 통해 물리적 하드웨어와 응용 프로그램 사이의 추상화 계층을 제공합니다. 이를 통해 개발자는 효율적으로 다양한 하드웨어를 지원할 수 있다.
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/b4939a43-752e-4ea1-bf91-31db7fcc0688" alt="image" width = 500>
 </p>
 
@@ -49,7 +49,7 @@ Linux는 Device Driver와 VFS 계층을 통해 물리적 하드웨어와 응용 
 
 # Character Device Drivers
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/ee7564af-c758-40bf-bdba-c9e54159d9cc" alt="image" width = 500>
 </p>
 
@@ -135,7 +135,7 @@ struct file_operations chardev_fops = {
 
 ## Simple Char Device Driver 
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/0f1059ed-ea6c-49c5-8f2b-900f1aaf8f47" alt="image" width = 500>
 </p>
 
@@ -160,7 +160,7 @@ int register_chrdev(unsigned int major, const char *name, const struct file_oper
 
 이제 응용프로그램에서 해당 Device를 open하면, my_open함수가 호출된다.
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/dc0abf0e-47e0-4958-9151-79e5233b6670" alt="image" width = 550>
 </p>
 

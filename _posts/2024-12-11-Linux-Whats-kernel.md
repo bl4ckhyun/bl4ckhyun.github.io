@@ -126,7 +126,7 @@ Kernel은 위에서 설명한 물리 자원과 추상 자원들을 관리(manage
 
 이를 통해 사용자는 복잡한 하드웨어 구조를 이해하지 않고도 컴퓨터 시스템을 효과적으로 사용할 수 있게 된다.
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/user-attachments/assets/2d2ba1cb-e797-4966-8775-084c4e72bcb6" alt="image" width = 800>
 </p>
 위에서 설명한 kernel의 구성 요소들인 Resources Manager들이 존재하는 공간을  Kenerl Space라고한다.
@@ -169,7 +169,7 @@ User Space의 Task들이 커널이 관리하는 자원에 접근해야할 필요
 
 ## 4-1. System call handle
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/user-attachments/assets/9588db60-7a01-4a15-b907-8798dd587c48" alt="image" width = 600>
 </p>
 
@@ -192,7 +192,7 @@ User Space의 Task들이 커널이 관리하는 자원에 접근해야할 필요
 
 ## 4-2. System call Wrapper routine
 
-<p align="center">
+<p align="left">
 <img src="https://github.com/user-attachments/assets/553fe645-d4ec-49bc-852a-7bc7df44edbd" alt="image" width = 500>
 </p>
 

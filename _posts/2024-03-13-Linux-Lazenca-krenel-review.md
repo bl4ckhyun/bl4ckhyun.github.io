@@ -69,7 +69,7 @@ $ dmesg | tail -1
 * 커널 메시지는 커널 메시지 버퍼에 저장되며, dmesg 명령어로 확인할 수 있습니다.
 
 # User Space VS Kernel Space
-<p align="center">
+<p align="left">
 <img src ="https://github.com/hyuntaeLee/hyuntaeLee.github.io/assets/97331148/4bbb95fe-dab9-47ec-ae3d-a68b3a29d588" alt="image" width = 500>
 </p>
 
