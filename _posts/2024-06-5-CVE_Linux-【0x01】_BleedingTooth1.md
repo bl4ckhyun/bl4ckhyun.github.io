@@ -40,6 +40,21 @@ tags: [CVE, Linux, Analysis, Bluetooth]
 
 # **BadVibes: Heap-Based Buffer Overflow (CVE-2020-24490)**
 
+공격 조건
+- 블루투스 5.0 칩셋이 장착된 피해자 기기
+- 스캐닝 모드가 활성화된 상태
+- 공격자가 근거리에 위치
+
+공격 방법
+- 공격자는 Extended Advertising data를 브로드캐스트 할수 있어야함
+- 시퀀스 다이어그램에서 보이는 'Advertise Packet' 메시지를 악용
+
+![Desktop View](/assets/images/data/blue1.png)
+
+>스캐닝 모드란?<br>
+>주변의 연결 가능한 BluetoothLE 장치의 이름과 주소를 검색한다.<br>
+>간단하게 페어링이라고 생각하면 된다.
+
 HCI 이벤트 패킷은 보통 해커가 직접 조작할 수 없지만(블루투스 펌웨어까지 제어권을 가진 경우에 한함), 블루투스 칩에서 생성되어 원격 블루투스 기기에서 오는 **advertisement reports**를 파싱하는 목적의 두 가지 유사한 메서드인 `hci_le_adv_report_evt()`와 `hci_le_ext_adv_report_evt()`가 있다.
 
 이 **reports**의 크기는 가변적이다.
@@ -199,9 +214,7 @@ static void store_pending_adv_report(struct hci_dev *hdev, bdaddr_t *bdaddr,
     - 그리고 버퍼의 크기가 `HCI_MAX_AD_LENGTH=31bytes` 로 정의되어 있다.
 - Bluetooth 4.0에서 Advertising payload는 31byte였는데, Bluetooth 5에서 지원하는 Extended Advertising Data의 크기가 최대 255바이트까지 가능하다.
 
-<p align="left">
-<img src ="https://github.com/user-attachments/assets/72d2b3f3-1009-4503-adbf-956f1c42a70a" alt ="img" width = 500>
-</p>
+![Desktop View](/assets/images/data/blue1-2.png)
 
 ```c
 //https://elixir.bootlin.com/linux/v4.19.136/source/include/net/bluetooth/hci_core.h#L205
@@ -237,4 +250,4 @@ struct hci_dev {
 
 [Linux: Heap-Based Buffer Overflow in HCI event packet parser (BleedingTooth)](https://github.com/google/security-research/security/advisories/GHSA-ccx2-w2r4-x649)<br>
 [BleedingTooth: Linux Bluetooth Zero-Click Remote Code Execution](https://google.github.io/security-research/pocs/linux/bleedingtooth/writeup.html#badvibes-heap-based-buffer-overflow-cve-2020-24490)<br>
-https://github.com/google/security-research/blob/master/pocs/linux/bleedingtooth/readme.md
+[https://github.com/google/security-research/blob/master/pocs/linux/bleedingtooth/readme.md](https://github.com/google/security-research/blob/master/pocs/linux/bleedingtooth/readme.md)

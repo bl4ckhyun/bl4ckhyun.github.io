@@ -51,9 +51,7 @@ docker run -it --rm --cap-add SYS_PTRACE --security-opt seccomp:unconfined --nam
 * 이렇게 실행함으로 공유폴더가 생성된다.
   * 공유폴더를 만드는 이유는 다운받은 문제를 편하게 갖고오기 위해서 이다.
 
-<p align="left">
-<img src ="/assets/images/data/set.png" alt="img" width = 700>
-</p>
+![Desktop View](/assets/images/data/set.png)
 
 그럼 이제 사진과 같이 VScode를 키고 터미널에 위에 명령어를 적으면 위에서 빌드한 이미지가 실행된다.
 
