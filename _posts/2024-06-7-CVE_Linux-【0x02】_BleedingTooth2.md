@@ -7,7 +7,7 @@ categories: [Vulnerability, Linux]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 
-# **BadChoice: Stack-Based Information Leak (CVE-2020-12352)**
+## **BadChoice: Stack-Based Information Leak (CVE-2020-12352)**
 
 이전 포스트에서 설명한 BadVibes 취약점은 임의의 값을을 R/W 를 하기에 충분하지 않은 취약점이고, victim의 메모리 레이아웃을 유출할 방법이 없어 보인다다.
 - why?

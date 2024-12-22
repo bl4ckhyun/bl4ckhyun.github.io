@@ -7,7 +7,7 @@ categories: [Vulnerability, Linux]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 
-# **BadKarma: Heap-Based Type Confusion (CVE-2020-12351)**
+## **BadKarma: Heap-Based Type Confusion (CVE-2020-12351)**
 
 >Author say<br>
 >I discovered the third vulnerability while attempting to trigger BadChoice and confirm its exploitability

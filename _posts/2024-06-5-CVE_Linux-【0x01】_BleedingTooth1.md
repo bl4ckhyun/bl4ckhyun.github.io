@@ -7,7 +7,7 @@ categories: [Vulnerability, Linux]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 
-# Introduction
+## Introduction
 
 - 필자는 syzkaller에 의해 bluetooth와 같은 하위 시스템은 그렇게 잘 커버되지 않을 인지
 - 대부분의 공객된 bluetooth 취약점
@@ -38,7 +38,7 @@ tags: [CVE, Linux, Analysis, Bluetooth]
     - **BadChoice (CVE-2020-12352)**
     - **BadKarma (CVE-2020-12351)**
 
-# **BadVibes: Heap-Based Buffer Overflow (CVE-2020-24490)**
+## **BadVibes: Heap-Based Buffer Overflow (CVE-2020-24490)**
 
 공격 조건
 - 블루투스 5.0 칩셋이 장착된 피해자 기기
