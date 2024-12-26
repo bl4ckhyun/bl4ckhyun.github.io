@@ -40,14 +40,14 @@ tags: [CVE, Linux, Analysis, Bluetooth]
 
 ## **BadVibes: Heap-Based Buffer Overflow (CVE-2020-24490)**
 
-공격 조건
-- Linux kernel 4.19 (with Bluetooth 5)
-- 스캐닝 모드가 활성화된 상태
-- 공격자가 근거리에 위치
+- **공격 조건**
+	- Linux kernel 4.19 (with Bluetooth 5)
+	- 스캐닝 모드가 활성화된 상태
+	- 공격자가 근거리에 위치
 
-공격 방법
-- 공격자는 Extended Advertising data를 브로드캐스트 할수 있어야함
-- 시퀀스 다이어그램에서 보이는 'Advertise Packet' 메시지를 악용
+- **공격 방법**
+	- 공격자는 Extended Advertising data를 브로드캐스트 할수 있어야함
+	- 시퀀스 다이어그램에서 보이는 'Advertise Packet' 메시지를 악용
 
 ![Desktop View](/assets/images/data/blue1.png)
 
