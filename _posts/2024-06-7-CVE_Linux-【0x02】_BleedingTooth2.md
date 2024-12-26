@@ -92,3 +92,9 @@ struct a2mp_info_rsp {
 >이 구조체를 attacker에게 보내기 전에 스택 프레임에 유용한 주소를 가지고 있는(kernel base를 leak할 수 있는?) pointer들을 채워넣고 a2mp_geinfo_req가 이를 재사용할 수 있게 만들면 info leak을 시도할 수 있다.
 ><br>
 > ⇒ 이것도 CONFIG_INIT_STACK_ALL_PATTERN을 설정해주면 막힘
+
+### reference
+
+[https://github.com/google/security-research/security/advisories/GHSA-7mh3-gq28-gfrq](https://github.com/google/security-research/security/advisories/GHSA-7mh3-gq28-gfrq)<br>
+[BleedingTooth: Linux Bluetooth Zero-Click Remote Code Execution](https://google.github.io/security-research/pocs/linux/bleedingtooth/writeup.html#badvibes-heap-based-buffer-overflow-cve-2020-24490)<br>
+with Changhyun Lee

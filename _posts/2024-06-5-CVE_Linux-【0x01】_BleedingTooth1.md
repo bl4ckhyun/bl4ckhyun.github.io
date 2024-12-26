@@ -251,3 +251,4 @@ struct hci_dev {
 [Linux: Heap-Based Buffer Overflow in HCI event packet parser (BleedingTooth)](https://github.com/google/security-research/security/advisories/GHSA-ccx2-w2r4-x649)<br>
 [BleedingTooth: Linux Bluetooth Zero-Click Remote Code Execution](https://google.github.io/security-research/pocs/linux/bleedingtooth/writeup.html#badvibes-heap-based-buffer-overflow-cve-2020-24490)<br>
 [https://github.com/google/security-research/blob/master/pocs/linux/bleedingtooth/readme.md](https://github.com/google/security-research/blob/master/pocs/linux/bleedingtooth/readme.md)
+<br>with Changhyun Lee
