@@ -10,7 +10,7 @@ tags: [CVE, Linux, Analysis, Bluetooth]
 ## **BadChoice: Stack-Based Information Leak (CVE-2020-12352)**
 
 이전 포스트에서 설명한 BadVibes 취약점은 임의의 값을을 R/W 를 하기에 충분하지 않은 취약점이고, victim의 메모리 레이아웃을 유출할 방법이 없어 보인다다.
-- why?
+- **why?**
   - 손상될 수 있는 유일한 중요 멤버는 순환 리스트에 대한 포인터임.
   - 순환 데이터 구조이므로 시작점으로 다시 돌아가도록 보장하지 않고는 변경할 수 없음.
   - victim의 메모리 레이아웃이 무작위화되어 있어 이 요구사항을 충족하기 어려움.

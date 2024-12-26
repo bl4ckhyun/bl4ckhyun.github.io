@@ -14,12 +14,12 @@ tags: [CVE, Linux, Analysis, Bluetooth]
 
 ![Desktop View](/assets/images/data/blue3.png)
 
-* BadKarma 취약점의 함수 호출 루틴
-    * 초기 패킷 수신:
+* **BadKarma 취약점의 함수 호출 루틴**
+    * **초기 패킷 수신**:
         * `hci_acldata_packet()`: ACL 데이터 패킷을 처리하는 시작점
         * `l2cap_recv_acldata()`: L2CAP 계층으로 데이터 전달
         * `l2cap_recv_frame()`: 프레임 처리 및 CID 확인
-    * 채널 분기 처리:
+    * **채널 분기 처리**:
         * CID 값에 따라 두 가지 경로로 분기
         * `l2cap_sig_channel`: 시그널링 채널 처리
         * `l2cap_data_channel`: 데이터 채널 처리 (취약점 발생 지점)
@@ -230,10 +230,10 @@ static struct amp_mgr *amp_mgr_create(struct l2cap_conn *conn, bool locked)
 
 ![Desktop View](/assets/images/data/blue3-1.png)
 * Again
-* 결과적으로, 함수에서는 `amp_mgr` 구조체를 벗어난 메모리 주소로 접근하게 된다.
-    * 이는 kernel panic을 발생시키게 됩니다.
-* `amp_mgr+0x110`에 있는 주소값을 임의로 조작하여 임의의 메모리 쓰기나 읽기를 시도할 수 있지만 이는 커널 힙 영역이기 때문에 일반적으로는 유저가 직접 조작할 수 없는 영역이다.
-    * 이때 heap spray라는 기법을 통해 공격자가 원하는 값을 주입하게 됩니다.
+	* 결과적으로, 함수에서는 `amp_mgr` 구조체를 벗어난 메모리 주소로 접근하게 된다.
+    	* 이는 kernel panic을 발생시키게 됩니다.
+	* `amp_mgr+0x110`에 있는 주소값을 임의로 조작하여 임의의 메모리 쓰기나 읽기를 시도할 수 있지만 이는 커널 힙 영역이기 때문에 일반적으로는 유저가 직접 조작할 수 없는 영역이다.
+    	* 이때 heap spray라는 기법을 통해 공격자가 원하는 값을 주입하게 됩니다.
 
 ### reference
 [https://github.com/google/security-research/security/advisories/GHSA-h637-c88j-47wq](https://github.com/google/security-research/security/advisories/GHSA-h637-c88j-47wq)<br>

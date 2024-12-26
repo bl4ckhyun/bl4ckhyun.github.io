@@ -7,7 +7,7 @@ categories: [Vulnerability, Linux_Kernel]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 
-## Introduction
+# **Introduction**
 
 - 필자는 syzkaller에 의해 bluetooth와 같은 하위 시스템은 그렇게 잘 커버되지 않을 인지
 - 대부분의 공객된 bluetooth 취약점
