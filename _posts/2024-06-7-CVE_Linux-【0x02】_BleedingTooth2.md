@@ -3,7 +3,7 @@ layout: post
 title: "BleedingTooth_0x02 : CVE-2020-12352"
 date: '2024-6-7 11:11:11 +0900'
 description: 'CVE about BleedingTooth'
-categories: [Vulnerability, Linux]
+categories: [Vulnerability, Linux_Kernel]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 

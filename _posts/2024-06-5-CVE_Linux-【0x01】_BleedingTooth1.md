@@ -3,7 +3,7 @@ layout: post
 title: "BleedingTooth_0x01 : CVE-2020-24490"
 date: '2024-6-5 11:11:11 +0900'
 description: 'CVE about BleedingTooth'
-categories: [Vulnerability, Linux]
+categories: [Vulnerability, Linux_Kernel]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 
@@ -41,7 +41,7 @@ tags: [CVE, Linux, Analysis, Bluetooth]
 ## **BadVibes: Heap-Based Buffer Overflow (CVE-2020-24490)**
 
 공격 조건
-- 블루투스 5.0 칩셋이 장착된 피해자 기기
+- Linux kernel 4.19 (with Bluetooth 5)
 - 스캐닝 모드가 활성화된 상태
 - 공격자가 근거리에 위치
 
