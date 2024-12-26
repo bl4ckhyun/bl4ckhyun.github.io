@@ -7,9 +7,7 @@ categories: [Vulnerability, Linux_Kernel]
 tags: [CVE, Linux, Analysis, Bluetooth]
 ---
 
-## **BleedingTooth : Exploitation**
-
-### **Summery Before Start**
+## **Summery Before Start**
 * **Target Version** : Linux kernel 4.19 (with Bluetooth 5)
 * **Vulnerabilities**
     * BadVibes: Heap-Based Buffer Overflow (CVE-2020-24490)
@@ -22,3 +20,5 @@ tags: [CVE, Linux, Analysis, Bluetooth]
     * **Info leak** : 공격자는 먼저 BadChoice 취약점(CVE-2020-12352)을 사용하여 커널 스택 정보를 유출한다. 이 정보는 메모리 레이아웃을 예측하고 KASLR(Kernel Address Space Layout Randomization)을 무력화하는 데 사용된다.
     * **Memory Corruption**: 그 다음 BadVibes 취약점(CVE-2020-24490)을 이용하여 힙 기반 버퍼 오버플로우를 일으킨다.
     * **Code Execution** : BadKarma 취약점(CVE-2020-12351)을 활용하여 임의 코드 실행을 한다. 공격자가 악의적인 l2cap 패킷을 보내 잠재적으로 커널 권한으로 코드 실행을 할 수 있게 한다.
+
+## **BleedingTooth : Exploitation**
