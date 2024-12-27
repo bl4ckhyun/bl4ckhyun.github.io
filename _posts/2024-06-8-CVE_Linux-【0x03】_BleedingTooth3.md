@@ -229,11 +229,11 @@ static struct amp_mgr *amp_mgr_create(struct l2cap_conn *conn, bool locked)
     * 아래 그림을 통해 `amp_mgr` 구조체를 확인해보면 알겠지만, sock 구조체보다 확실히 크기가 작은게 확인이 된다.
 
 ![Desktop View](/assets/images/data/blue3-1.png)
-* Again
-	* 결과적으로, 함수에서는 `amp_mgr` 구조체를 벗어난 메모리 주소로 접근하게 된다.
+- Again
+	- 결과적으로, 함수에서는 `amp_mgr` 구조체를 벗어난 메모리 주소로 접근하게 된다.
 		- 이는 kernel panic을 발생시키게 됩니다.
-	* `amp_mgr+0x110`에 있는 주소값을 임의로 조작하여 임의의 메모리 쓰기나 읽기를 시도할 수 있지만 이는 커널 힙 영역이기 때문에 일반적으로는 유저가 직접 조작할 수 없는 영역이다.
-    	- 이때 heap spray라는 기법을 통해 공격자가 원하는 값을 주입하게 됩니다.
+	- `amp_mgr+0x110`에 있는 주소값을 임의로 조작하여 임의의 메모리 쓰기나 읽기를 시도할 수 있지만 이는 커널 힙 영역이기 때문에 일반적으로는 유저가 직접 조작할 수 없는 영역이다.
+		- 이때 heap spray라는 기법을 통해 공격자가 원하는 값을 주입하게 됩니다.
 
 ### reference
 [https://github.com/google/security-research/security/advisories/GHSA-h637-c88j-47wq](https://github.com/google/security-research/security/advisories/GHSA-h637-c88j-47wq)<br>
